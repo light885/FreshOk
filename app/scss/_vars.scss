@@ -1,0 +1,43 @@
+$color-main: #121212;
+$color-emperor: #505050;
+$color-white: #FFFFFF;  
+$color-christi: #63A60E;
+$color-metal: #31352B;
+$color-mahogany: #CF3E3B;
+$color-silver: #C1C1C1;
+
+%opensans-400 {
+  font-family: "OpenSans-Regular",
+    sans-serif;
+  font-weight: 400;
+}
+
+%opensans-500 {
+  font-family: "OpenSans-Medium",
+    sans-serif;
+  font-weight: 500;
+}
+
+%opensans-600 {
+  font-family: "'OpenSans-SemiBold",
+    sans-serif;
+  font-weight: 600;
+}
+
+%opensans-700 {
+  font-family: "OpenSans-Bold",
+    sans-serif;
+  font-weight: 700;
+}
+
+%ruda-600 {
+  font-family: "Ruda-SemiBold",
+    sans-serif;
+  font-weight: 600;
+}
+
+%ruda-900 {
+  font-family: "Ruda-Black",
+    sans-serif;
+  font-weight: 900;
+}
