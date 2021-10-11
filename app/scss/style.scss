@@ -77,7 +77,7 @@
   }
 
   &__btn {
-    padding: 15px 38px 15px 61px;
+    padding: 15px 38px 15px 73px;
     font-weight: 600;
     color: $color-christi;
     background-color: $color-white;
@@ -207,6 +207,96 @@
 .logo__img {
   margin-right: 24px;
 }
+
+.footer {
+  background-color: $color-metal;
+  color: $color-white;
+
+  &__top {
+    padding: 30px 0;
+  }
+
+  &__inner {
+    border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+    display: flex;
+  }
+
+  &__subscription {
+    margin-right: 151px;
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: 18px;
+  }
+
+  &__form {
+    position: relative;
+    display: inline-flex;
+    height: 40px;
+  }
+
+  &__field {
+    width: 305px;
+    border-radius: 6px;
+    padding: 0 136px 0 10px;
+    color: $color-metal;
+
+    &::placeholder {
+      color: #4F4F4F;
+      line-height: 1.0;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    width: 126px;
+    background-color: $color-christi;
+    color: $color-white;
+    text-transform: uppercase;
+    border-radius: 0 6px 6px 0;
+    @extend %opensans-600;
+    font-size: 12px;
+  }
+
+  &__items {
+    width: 205px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 18px;
+  }
+
+  &__socials {
+    display: flex;
+    margin-top: 18px;
+    margin-bottom: 30px;
+  }
+
+  &__box:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  &__bottom {
+    height: 77px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__payment {
+    display: flex;
+    vertical-align: middle;
+  }
+
+  &__pay:not(:last-child) {
+    margin-right: 25px;
+  }
+}
+
 
 
 
