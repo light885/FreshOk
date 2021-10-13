@@ -46,7 +46,7 @@ button,
 textarea,
 select {
   font: inherit;
-  border: none;
+  border: none;  
 }
 
 a {
@@ -55,13 +55,13 @@ a {
 
 button {
   background-color: transparent;
-  border: none;
+  // border: none;
 }
 
 address {
   font-style: normal;
 }
 
-input {
-  border: none;
-}
+  // input {
+  //   border: none;
+  // }

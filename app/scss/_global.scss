@@ -4,20 +4,20 @@ body {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   font-size: 14px;
   line-height: 1.4;
+  background-color: $color-white;
   color: $color-main;
-  @extend %opensans-400;
-}
-
-.main {
-  flex-grow: 1;
+  font-family: 'OpenSans', sans-serif;
+  font-weight: 400;
 }
 
 button {
   cursor: pointer;
+}
+
+.main {
+  flex-grow: 1;
 }
 
 .container {
@@ -38,6 +38,8 @@ button {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+
 
 a {
   color: $color-white;
