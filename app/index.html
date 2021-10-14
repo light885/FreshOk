@@ -209,6 +209,43 @@
         </div>
       </div>
     </section>
+
+    <div class="service">
+      <div class="container">
+        <ul class="service__list">
+
+          <li class="service__item service__item--delivery">
+            <span class="service__name">
+              Бесплатная доставка
+            </span>
+            <span class="service__text">
+              Для заказов на сумму от 500 ₽
+            </span>
+          </li>
+
+          <li class="service__item service__item--return">
+            <span class="service__name">
+              Возврат товара
+            </span>
+            <span class="service__text">
+              Если товары были испорчены
+            </span>
+          </li>
+
+          <li class="service__item service__item--support">
+            <span class="service__name">
+              Поддержка 24/7
+            </span>
+            <span class="service__text">
+              Лучшие операторы
+            </span>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+
+
   </main>
 
   <footer class="footer">
@@ -222,10 +259,11 @@
         <div class="footer__info">
           <div class="footer__subscription">
             <form class="footer__form" action="#" method="get">
-              <label class="footer__label">
+              <label class="footer__label" for="footer__input">
                 Следите за нашими акциями
               </label>
-              <input class="footer__field" type="email" name="subscription" placeholder="email@email.com" required>
+              <input class="footer__field" id="footer__input" type="email" name="subscription"
+                placeholder="email@email.com" required>
               <button class="footer__button" type="submit">подписаться</button>
             </form>
           </div>
