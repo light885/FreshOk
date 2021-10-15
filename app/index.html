@@ -38,7 +38,7 @@
               адрес и время доставки
             </a>
           </li>
-          <li class="header__item">
+          <li class="header__item header__item--support">
             <a class="header__link" href="#">
               <svg class="header__img" width="23" height="23" viewBox="0 0 23 23" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +70,7 @@
     <div class="header__bottom">
       <div class="container">
         <nav class="menu">
-          <a class="logo" href="#">
+          <a class="logo logo--menu" href="#">
             <img class="logo__img" src="images/logo.svg " width="200" height="60" alt="Логотип">
           </a>
 
@@ -94,7 +94,7 @@
             <label class="menu__label">
               <input class="menu__field" type="text" name="search" placeholder="Найти в магазине ..." required>
             </label>
-            <button class="menu__btn" type="submit">Поиск</button>
+            <button class="button button--form-dark" type="submit">Поиск</button>
           </form>
 
           <ul class="menu__user">
@@ -259,27 +259,26 @@
           </li>
 
           <li class="product__box">
-            <button class="product__btn" type="button" data-filter="category-a">Фрукты</button>
+            <button class="product__btn" type="button" data-filter=".category-fruits">Фрукты</button>
           </li>
 
           <li class="product__box">
-            <button class="product__btn" type="button" data-filter="category-b">Овощи</button>
+            <button class="product__btn" type="button" data-filter=".category-vegetables">Овощи</button>
           </li>
 
           <li class="product__box">
-            <button class="product__btn" type="button" data-filter="category-c">Напитки</button>
+            <button class="product__btn" type="button" data-filter=".category-beverages">Напитки</button>
           </li>
 
           <li class="product__box">
-            <button class="product__btn" type="button" data-filter="category-d">Бакалея</button>
+            <button class="product__btn" type="button" data-filter=".category-grocery">Бакалея</button>
           </li>
 
         </ul>
 
         <ul class="product__content">
-          <li class="product__items mix category-a">
+          <li class="product__items mix category-fruits">
             <article class="product__item">
-
               <div class="product__top">
                 <div class="product__icons">
                   <span class="badge">
@@ -289,7 +288,6 @@
                     -50%
                   </span>
                 </div>
-
                 <button class="product__button" type="button">
                   <svg class="product__heart" width="32" height="29" viewBox="0 0 32 29" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -334,7 +332,7 @@
             </article>
           </li>
 
-          <li class="product__items mix category-a">
+          <li class="product__items mix category-fruits">
             <article class="product__item">
               <div class="product__top">
                 <button class="product__button" type="button">
@@ -377,7 +375,7 @@
             </article>
           </li>
 
-          <li class="product__items mix category-a">
+          <li class="product__items mix category-fruits">
             <article class="product__item">
               <div class="product__top">
 
@@ -426,7 +424,7 @@
             </article>
           </li>
 
-          <li class="product__items mix category-b">
+          <li class="product__items mix category-vegetables">
             <article class="product__item">
               <div class="product__top">
                  <div class="product__icons">
@@ -476,7 +474,7 @@
             </article>
           </li>
 
-          <li class="product__items mix category-b">
+          <li class="product__items mix category-vegetables">
             <article class="product__item">
               <div class="product__top">
                 <div class="product__icons">
@@ -524,7 +522,7 @@
             </article>
           </li>
 
-          <li class="product__items mix category-c">
+          <li class="product__items mix category-beverages">
             <article class="product__item">
               <div class="product__top">
 
@@ -578,7 +576,7 @@
             </article>
           </li>
 
-          <li class="product__items mix category-d">
+          <li class="product__items mix category-grocery">
             <article class="product__item">
               <div class="product__top">
 
@@ -628,7 +626,7 @@
             </article>
           </li>
 
-          <li class="product__items mix category-d">
+          <li class="product__items mix category-grocery">
             <article class="product__item">
               <div class="product__top">               
 
@@ -700,7 +698,7 @@
               </label>
               <input class="footer__field" id="footer__input" type="email" name="subscription"
                 placeholder="email@email.com" required>
-              <button class="footer__button" type="submit">подписаться</button>
+              <button class="button button--form-green" type="submit">подписаться</button>
             </form>
           </div>
 
