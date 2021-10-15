@@ -6,13 +6,14 @@
   line-height: 1.3;
   padding: 12px 24px;
   border-radius: 6px;
+  margin: auto;
 
   &--light {
+    display: block;
     background-color: transparent;
     color: $color-christi;
     border: 1px solid $color-christi;
-  }   
+  }
 }
-
 
 

@@ -4,6 +4,8 @@
 @import 'vars';
 @import 'global';
 @import 'button';
+@import 'badge';
+
 
 .header {
 
@@ -38,6 +40,11 @@
     font-size: 13px;
     line-height: 1.4;
     font-weight: 700;
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   &__img {
@@ -122,12 +129,26 @@
   }
 
   &__box:not(:last-child) {
-    margin-right: 31px;
+    margin-right: 8px;
   }
 
   &__button {
     position: relative;
     transition: all 0.3s;
+    padding: 9px 13px;
+
+    &:hover {
+      background-color: $color-christi;
+      border-radius: 3px;
+      height: 50px;
+      width: 50px;
+      tansition: all .3s linear;
+    }
+
+    &:nth-child(1):hover {
+      background-color: $color-white;
+      opacity: 0.1;
+    }
   }
 
   &__num {
@@ -136,8 +157,8 @@
     width: 18px;
     border-radius: 50%;
     background-color: $color-white;
-    top: -7px;
-    left: -7px;
+    top: 3px;
+    left: 10px;
     font-size: 10px;
     line-height: 1.8;
     color: $color-mahogany;
@@ -277,6 +298,147 @@
     margin-bottom: 7px;
   }
 }
+
+
+.product {
+  padding: 72px 0;
+
+  &__filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 51px;
+  }
+
+  &__box:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  &__btn {
+    font-weight: 700;
+    font-size: 15px;
+
+    &:hover,
+    &:active {
+      border-bottom: 3px solid rgba(99, 166, 14, 0.2);
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 48px;
+  }
+
+  &__items {
+    border: 1px solid rgba(17, 17, 17, 0.2);
+    border-radius: 6px;
+    position: relative;
+
+    &:hover {
+      border-color: $color-christi;
+    }
+  }
+
+  &__top {
+    margin-bottom: 56px;
+
+  }
+
+  &__icons {
+    padding-left: 12px;
+    padding-top: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__button {
+    position: absolute;
+    right: 5px;
+    top: 17px;
+
+    path {
+      fill: #C1C1C1;
+    }
+
+    &:hover {
+      path {
+        fill: #FFB800;
+      }
+    }
+  }
+
+
+
+
+
+
+  &__novelty {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  &__img {
+    max-width: 300px;
+    max-height: 225px;
+    margin-bottom: 18px;
+  }
+
+  &__title {
+    margin-bottom: 46px;
+    font-weight: 600;
+    padding-left: 18px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 18px 0 21px;
+    align-items: center;
+  }
+
+  &__old-price {
+    display: block;
+    position: relative;
+    color: $color-silver;
+
+    &::before {
+      content: "";
+      position: absolute;
+      border: 1px solid $color-silver;
+      width: 100%;
+      bottom: 9px;
+      transform: rotate(-14.99deg);
+    }
+  }
+
+  &__cart {
+    padding: 8px;
+    background-color: $color-christi;
+    border-radius: 3px;
+    height: 32px;
+    width: 32px;
+  }
+
+}
+
+
+
+.mixitup-control-active {
+  color: #2352DE;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .footer {
   background-color: $color-metal;
