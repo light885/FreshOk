@@ -534,3 +534,65 @@
     }
   }
 }
+
+.banners {
+  padding-bottom: 72px;
+
+  &__items {
+    display: grid;
+    min-height: 300px;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 31px;
+  }
+
+  &__item {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-left: 31px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.0;
+    border-radius: 4px;
+
+    &:nth-child(1) {
+
+      .banners__subtitle,
+      .banners__title,
+      .banners__link {
+        color: $color-white;
+        text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+      }
+
+      .banners__link {
+        border-bottom: 2px solid $color-white;
+      }
+    }
+  }
+
+  &__subtitle {
+
+    font-size: 12px;
+    line-height: 1.0;
+    letter-spacing: 0.1em;
+    margin-bottom: 18px;
+  }
+
+  &__title {
+    font-family: Ruda;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.4;   
+    width: 70%;
+  }
+
+  &__link {
+    line-height: 2;
+    width: fit-content;
+    color: $color-emperor;
+    border-bottom: 2px solid $color-emperor;
+  }
+}
