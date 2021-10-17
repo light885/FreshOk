@@ -20,6 +20,27 @@ $(function () {
     Speed: 2000
   });
 
-  var mixer = mixitup('.product__content');
+
+  var containerEl1 = document.querySelector('[data-ref="container-1"]');
+  var containerEl2 = document.querySelector('[data-ref="container-2"]');
+
+  var config = {
+    controls: {
+      scope: 'local'
+    }
+  };
+
+  var mixer1 = mixitup(containerEl1, config);
+  var mixer2 = mixitup(containerEl2, config);
+
+
+  // $('.star').rateYo({
+  //   starWidth: "16px",
+  //   normalFill: "#FFB800",
+  //   ratedFill: "#FFB800",
+  //   maxValue: 1,
+  //   numStars: 1,
+  //   readOnly: true
+  // });
 
 });
