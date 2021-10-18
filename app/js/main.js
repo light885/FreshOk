@@ -33,14 +33,11 @@ $(function () {
   var mixer1 = mixitup(containerEl1, config);
   var mixer2 = mixitup(containerEl2, config);
 
-
-  // $('.star').rateYo({
-  //   starWidth: "16px",
-  //   normalFill: "#FFB800",
-  //   ratedFill: "#FFB800",
-  //   maxValue: 1,
-  //   numStars: 1,
-  //   readOnly: true
-  // });
+  $('.star').rateYo({
+    starWidth: "16px",    
+    ratedFill: "#FFB800",    
+    numStars: 1,
+    readOnly: true
+  });
 
 });
