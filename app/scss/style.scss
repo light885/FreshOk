@@ -5,19 +5,20 @@
 @import 'global';
 @import 'button';
 @import 'badge';
-
+@import 'control';
+@import 'filter';
+@import 'availability';
 
 .header {
 
   &__top {
+    padding: 14px 0;
     background-color: $color-metal;
-    height: 50px;
   }
 
   &__list {
     display: flex;
     align-items: center;
-    padding: 13px 0;
     top: 0;
     z-index: 1;
   }
@@ -27,8 +28,10 @@
       margin-right: 27px;
     }
 
-    &--support {
-      margin-left: 27px;
+    &:nth-child(2) {
+      .header__link {
+        margin-left: 27px;
+      }
     }
 
     &--delivery {
@@ -51,21 +54,24 @@
     }
   }
 
-  &__img {
+  &__icon {
     margin-right: 17px;
   }
 
   &__bottom {
+    padding: 25px 0;
     background-color: $color-christi;
-    height: 110px;
   }
 }
 
 .menu {
   display: flex;
   align-items: center;
-  padding: 25px 0;
   z-index: 1;
+
+  &__logo {
+    margin-right: 27px;
+  }
 
   &__catalog {
     padding: 16px 40px 15px 66px;
@@ -84,7 +90,7 @@
     }
   }
 
-  &__line {
+  &__nav {
     position: absolute;
     left: 18px;
   }
@@ -95,20 +101,32 @@
     top: 23px;
   }
 
+  &__form {
+    width: 47%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon-search {
+    position: absolute;
+    z-index: 1;
+    margin-left: 10px;
+  }
+
   &__search {
-    position: relative;
+    width: 95%;
+    display: flex;
+  }
+
+  &__label {
+    width: 100%;
   }
 
   &__field {
     height: 50px;
-    width: 419px;
+    width: 100%;
     border-radius: 6px 0 0 6px;
-    background-image: url(../images/icon/search.svg);
-    background-position: 13px center;
-    background-repeat: no-repeat;
-    background-size: auto;
-    padding-left: 52px;
-    padding-right: 12px;
+    padding: 0 12px 0 50px;
     color: $color-metal;
 
     &::placeholder {
@@ -121,16 +139,9 @@
     margin-left: auto;
   }
 
-  &__button {
+  &__control {
     position: relative;
-    transition: all 0.3s;
     padding: 9px 13px;
-    background-color: transparent;
-
-    &:hover,
-    &:active {
-      opacity: 0.1;
-    }
   }
 
   &__num {
@@ -148,10 +159,6 @@
     text-align: center;
     font-weight: 600;
   }
-}
-
-.logo--menu {
-  margin-right: 27px;
 }
 
 .promotion {
@@ -226,15 +233,24 @@
   padding: 14px 21px;
   z-index: 1;
 
-  &:hover,
   &:active {
+    background-color: #F3F3F2;
+
+    path {
+      fill: $color-christi;
+    }
+  }
+
+  &:hover {
     background-color: #E0EDCF;
-    border: 1px solid $color-christi;
+
+    path {
+      fill: $color-christi;
+    }
   }
 
   &:focus {
-    background-color: #E0EDCF;
-    border: 1px solid $color-christi;
+    background-color: #F2F2F2;
     box-shadow: 0px 0px 0px 3px rgba(99, 166, 14, 0.5);
   }
 }
@@ -246,6 +262,7 @@
 .slick-next {
   right: 60px;
 }
+
 
 .service {
   background-color: #F6F6F6;
@@ -299,26 +316,6 @@
 .product {
   padding: 72px 0;
 
-  &__filter {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 51px;
-  }
-
-  &__box:not(:last-child) {
-    margin-right: 24px;
-  }
-
-  &__btn {
-    font-weight: 700;
-    font-size: 15px;
-
-    &:hover,
-    &:active {
-      border-bottom: 3px solid rgba(99, 166, 14, 0.2);
-    }
-  }
-
   &__content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -329,57 +326,35 @@
   &__items {
     border: 1px solid rgba(17, 17, 17, 0.2);
     border-radius: 6px;
-    position: relative;
 
     &:hover {
       border-color: $color-christi;
     }
   }
 
+  &__item {
+    padding: 11px 12px 12px 18px;
+  }
+
   &__top {
-    margin-bottom: 56px;
-  }
-
-  &__icons {
-    padding-left: 12px;
-    padding-top: 12px;
+    margin-bottom: 4px;
     display: flex;
-    flex-direction: column;
-  }
-
-  &__button {
-    position: absolute;
-    right: 5px;
-    top: 17px;
-
-    path {
-      fill: #C1C1C1;
-    }
-
-    &:hover {
-      path {
-        fill: #FFB800;
-      }
-    }
+    justify-content: space-between;
   }
 
   &__img {
-    max-width: 300px;
-    max-height: 225px;
-    margin-bottom: 18px;
+    margin-bottom: 13px;
   }
 
   &__title {
-    margin-bottom: 46px;
     font-weight: 600;
-    padding-left: 18px;
+    min-height: 64px;
   }
 
   &__bottom {
     display: flex;
     justify-content: space-between;
-    padding: 0 18px 0 21px;
-    align-items: center;
+    align-items: flex-end;
   }
 
   &__old-price {
@@ -396,25 +371,164 @@
       transform: rotate(-14.99deg);
     }
   }
+}
 
-  &__cart {
-    padding: 8px;
-    background-color: $color-christi;
-    border-radius: 3px;
-    height: 32px;
-    width: 32px;
+.mixitup-control-active {
+  border-bottom: 3px solid rgba(99, 166, 14, 0.2);
+}
+
+.banners {
+  padding-bottom: 72px;
+
+  &__items {
+    display: grid;
+    min-height: 300px;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 31px;
+  }
+
+  &__item {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-left: 31px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.0;
+    border-radius: 4px;
+
+    &:nth-child(1) {
+
+      .banners__subtitle,
+      .banners__title,
+      .banners__link {
+        color: $color-white;
+        text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+      }
+
+      .banners__link {
+        border-bottom: 2px solid $color-white;
+      }
+    }
+  }
+
+  &__subtitle {
+
+    font-size: 12px;
+    line-height: 1.0;
+    letter-spacing: 0.1em;
+    margin-bottom: 18px;
+  }
+
+  &__title {
+    font-family: 'Ruda', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.4;
+    width: 70%;
+  }
+
+  &__link {
+    line-height: 2;
+    width: fit-content;
+    color: $color-emperor;
+    border-bottom: 2px solid $color-emperor;
+  }
+}
+
+.stock {
+  padding: 72px 0;
+  background-color: #F5F5F5;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 48px;
+  }
+
+  &__items {
+    border: 1px solid $color-silver;
+    border-radius: 6px;
+    background: $color-white;
+    max-width: 300px;
+    max-height: 124px;
 
     &:hover {
-      background-color: #4D800C;
+      border-color: $color-christi;
     }
+  }
 
-    &:active {
-      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
+  &__item {
+    padding: 12px;
+    display: flex;
+  }
 
-    &:focus {
-      box-shadow: 0px 0px 0px 4px #E0EDCF;
+  &__top {
+    margin-right: 12px;
+  }
+
+  &__img {
+    margin-top: -10px;
+  }
+
+  &__inner {
+    width: 59%;
+  }
+
+  &__title {
+    font-weight: 600;
+    min-height: 58px;
+  }
+
+  &__availability {
+    margin-bottom: 5px;
+  }
+
+  &__indicators {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price {
+    margin-right: 10px;
+    line-height: 1.0;
+  }
+
+  &__new-price {
+    font-weight: 600;
+    font-size: 18px;
+    color: $color-emperor;
+  }
+
+  &__old-price {
+    position: relative;
+    font-size: 12px;
+    color: $color-silver;
+
+    &::before {
+      content: "";
+      position: absolute;
+      border: 1px solid $color-silver;
+      width: 100%;
+      bottom: 9px;
+      transform: matrix(0.99, -0.17, -0.13, -0.99, 0, 0);
     }
+  }
+
+  &__rating {
+    display: block;
+    position: relative;
+    font-weight: 700;
+    color: $color-emperor;
+  }
+
+  &__button {
+    display: block;
   }
 }
 
@@ -422,12 +536,125 @@
   border-bottom: 3px solid rgba(99, 166, 14, 0.2);
 }
 
+.brands {
+  padding: 72px 0;
+
+  &__item {
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1.0;
+      transition: all 0.3s;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__img {
+    object-fit: contain;
+    object-position: center center;
+  }
+}
+
+.news {
+  padding-bottom: 72px;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    text-align: start;
+    margin-bottom: 30px;
+  }
+
+  &__all {
+    font-weight: 700;
+    line-height: 1.7;
+    color: $color-christi;
+    text-transform: uppercase;
+    border-bottom: 2px solid $color-christi;
+
+    &:hover,
+    &:active {
+      color: #4D800C;
+      border-bottom: 2px solid #4D800C;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 410px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    position: relative;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__img {
+    object-fit: cover;
+    margin-bottom: 18px;
+  }
+
+  &__date {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 20px;
+    width: 65px;
+    height: 76px;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background-color: $color-white;
+    border-radius: 0px 0px 4px 4px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__number {
+    font-family: 'Ruda', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.0;
+  }
+
+  &__text {
+    max-height: 75px;
+    margin-bottom: 18px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-left: 18px;
+    color: $color-main;
+
+    &:hover {
+      color: $color-christi;
+    }
+  }
+}
+
 .footer {
   background-color: $color-metal;
   color: $color-white;
   padding-top: 30px;
 
-  &__line {
+  &__top {
     border-bottom: 1px solid rgb(255, 255, 255, 0.1);
   }
 
@@ -438,11 +665,12 @@
 
   &__subscription {
     display: block;
+    width: 25%;
+    margin-right: 63px;
   }
 
   &__form {
-    position: relative;
-    margin-right: 63px;
+    width: 95%;
   }
 
   &__label {
@@ -450,11 +678,16 @@
     margin-bottom: 18px;
     line-height: 1.0;
     padding-top: 30px;
-    width: 306px;
+    width: 100%;
+  }
+
+  &__sub {
+    display: flex;
+    align-items: center;
   }
 
   &__field {
-    width: 181px;
+    width: 100%;
     height: 40px;
     border-radius: 6px 0 0 6px;
     padding: 12px;
@@ -472,7 +705,7 @@
     padding-top: 30px;
   }
 
-  &__items {
+  &__contact {
     padding-top: 30px;
   }
 
@@ -503,7 +736,7 @@
 
   &__social {
     display: block;
-    padding: 2px;
+    padding: 4px;
     transition: all 0.3s;
 
     &:active,

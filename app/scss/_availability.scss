@@ -1,0 +1,19 @@
+.availability {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 1.0;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  &--green {
+    color: $color-christi;
+  }
+
+  &--red {
+    color: $color-mahogany;
+  }
+
+  &--grey {
+    color: $color-silver;
+  }
+}
